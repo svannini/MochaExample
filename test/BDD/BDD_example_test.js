@@ -1,4 +1,4 @@
-var example = require('../lib/example');
+var example = require('../../lib/example');
 var should = require('chai').should();
 var expect = require('chai').expect;
 var assert = require('chai').assert;

@@ -1,4 +1,4 @@
-var example = require('../lib/example');
+var example = require('../../lib/example');
 var assert = require('chai').assert;
 
 /* TDD */
@@ -11,14 +11,14 @@ suite("example", function() {
             msg = example.writeSomething();
         });
 
-        test("should return a string", function() {
+        test("return a string", function() {
             assert.isString(msg, "This is a string!");
         });
 
-        test("should be not empty", function() {
+        test("is not empty", function() {
             assert.notEqual(msg, "", "This is not empty!");
-        })
-    })
+        });
+    });
 
     suite("getOddNum()", function() {
         var num;
@@ -27,16 +27,15 @@ suite("example", function() {
             num = example.getOddNum(1);
         });
 
-        test("should be a number", function() {
+        test("return a number", function() {
             assert.isNumber(num, "This is a number!");
         });
 
-        test("should be odd", function() {
+        test("is odd", function() {
             assert.notEqual(num % 2, 0, "This is an odd number!");
         });
 
-
-        test("should wait 1 second before finishing", function(done){
+        test("wait 1 second before finishing", function(done){
             setTimeout(function(){
                 assert.ok(true, "This is an asynchronous test");
                 // dico a mocha che l'azione è completata
